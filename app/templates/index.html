@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predição de Evasão</title>
+</head>
+<body>
+
+    <h1>Predição de Evasão Escolar</h1>
+
+    <form action="/predict" method="post">
+
+        <!-- EXEMPLO DE OUTRO CAMPO -->
+        <label>Idade:</label>
+        <input type="number" name="idade" required><br><br>
+
+        <!-- 🔥 GÊNERO COM SELECT -->
+        <label>Gênero:</label>
+        <select name="genero" required>
+            <option value="">Selecione</option>
+            <option value="Masculino">Masculino</option>
+            <option value="Feminino">Feminino</option>
+        </select><br><br>
+
+        <!-- BOTÃO -->
+        <button type="submit">Prever</button>
+
+    </form>
+
+    <!-- RESULTADO -->
+    {% if resultado %}
+        <h2>{{ resultado }}</h2>
+    {% endif %}
+
+</body>
+</html>
